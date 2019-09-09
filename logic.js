@@ -6,13 +6,17 @@ var compIndex;
 var compChoice;
 displayGuesses();
 setLetter();
+
 function displayGuesses() {
-   document.querySelector("#guessesRemaining").innerHTML = guessesRemaininRemaining
+   document.querySelector("#guessesRemaining").innerHTML = guessesRemaining
+}
+
 function setLetter(){
    compIndex = Math.floor(Math.random() * alphabet.length);
    compChoice = alphabet[compIndex];
    console.log("comp choice " + compChoice);
 }
+
 document.querySelector("#guessesRemaining").innerHTML = guessesRemaining;
 // console.log("comp index " + compIndex);
 // console.log("comp choice " + compChoice);
@@ -35,4 +39,4 @@ document.onkeyup = function(event){
            setLetter()
        }
    }
-}}
+}
